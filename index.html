@@ -1,0 +1,879 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=dark>
+
+<!-- 加载 jQuery 和 FancyBox -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#005691">
+  <meta name="author" content="Kingmeesh">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="">
+  
+  
+  
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+rel="stylesheet">
+
+  
+  <title>Kingmeesh</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/font.css">
+<link rel="stylesheet" href="/css/backgroundize.css">
+<link rel="stylesheet" href="/css/glassBg.css">
+<link rel="stylesheet" href="/css/scrollbar.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"nhwite.cn","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":80,"cursorChar":".","loop":false,"scope":[]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div id="web_bg"></div><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KingMeesh</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>主页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>档案</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.25)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="“我们的事业将默默地、但是永恒发挥作用地存在下去，面对我们的骨灰，高尚的人们将洒下热泪”"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E5%8D%95%E5%90%91%E5%8E%86/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/SFe37Cbrn812yhU.webp" srcset="/img/loading.gif" lazyload alt="单向历">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+          <i class="index-pin iconfont icon-top" title="Pin on top"></i>
+        
+        <a href="/%E5%8D%95%E5%90%91%E5%8E%86/" target="_blank">
+          单向历
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E5%8D%95%E5%90%91%E5%8E%86/" target="_blank">
+        <div>
+          每日揭开新的一页，如同生活在妙不可言的等待中，等待随便哪种未来。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="1900-11-10 00:00" pubdate>
+              1900-11-10
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BB%8A%E5%A4%A9%E5%81%9A%E4%BB%80%E4%B9%88/">#今天做什么</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E6%97%A0%E5%90%8D%E8%AF%97/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/20/OGTtQbqwBE92UFm.webp" srcset="/img/loading.gif" lazyload alt="无名诗 1">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%97%A0%E5%90%8D%E8%AF%97/" target="_blank">
+          无名诗 1
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E6%97%A0%E5%90%8D%E8%AF%97/" target="_blank">
+        <div>
+          当我试图向黑塞和陀氏寻求答案。 从炽热的冬天去难以逾越的寒冷 也在不合时宜之际将这世界乱爱 继而留下了许多热泪盈眶的时刻。       当我试图从回望的脚步中去回念。 以后来者的视角向世界索求缘由 世界却始终沉默，弃我于隔雾观花。 可叹爱恨纠葛如人饮水，冷暖自知 	  我在冷静回望中宣读严厉的判决 用镣铐把我和路灯困在寒冷雪夜。 我欲暖冷铁，冷铁却欲将我抽离。 	  我在宏伟叙事中造就爱的自恋
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-12-09 01:40" pubdate>
+              2024-12-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E8%AF%97/" class="category-chain-item">诗</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E8%AF%A6%E8%A7%A3%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/20/L3m7XhRW1btgMwe.jpg" srcset="/img/loading.gif" lazyload alt="详解前缀和与差分">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%AF%A6%E8%A7%A3%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" target="_blank">
+          详解前缀和与差分
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E8%AF%A6%E8%A7%A3%E5%B7%AE%E5%88%86%E4%B8%8E%E5%89%8D%E7%BC%80%E5%92%8C/" target="_blank">
+        <div>
+          前缀和与差分是算法中常用的技巧，主要用于快速处理与区间操作相关的问题。它们各有适用的场景： 前缀和 用途：前缀和用于高效地求解数组中任意区间的元素之和。其思想是预先计算数组的累积和，从而在O(1)O(1)O(1)时间内求出任意区间的和。 解决的问题：  区间和查询：给定一个数组和多个区间，快速求解每个区间的和。 动态求和问题：通过提前构建前缀和数组，可以避免重复计算，提高效率。  更具体的问题:
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-11-14 17:31" pubdate>
+              2024-11-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B7%AE%E5%88%86/">#差分</a>
+            
+              <a href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/">#前缀和</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E6%AD%BB%E4%BE%BF%E5%9F%8B%E6%88%91(%E4%B8%80)/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/v57wIELiYBRGXSr.webp" srcset="/img/loading.gif" lazyload alt="死便埋我(一)">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%AD%BB%E4%BE%BF%E5%9F%8B%E6%88%91(%E4%B8%80)/" target="_blank">
+          死便埋我(一)
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E6%AD%BB%E4%BE%BF%E5%9F%8B%E6%88%91(%E4%B8%80)/" target="_blank">
+        <div>
+          夜里，他走在满是小石子的道路上，路旁是遍地预备重生的野草，两侧则是初春寒冷的田野。对刘伶来说，家乡是一处南荒之地，在这里，人们严格遵照自然的作息，夜是安静的夜，暗也暗得纯粹。只有同样出门在外的卡车不时从他身旁路过，为这位刚刚开始自己漂泊之旅的孩子带来满身尘土。然而说实在的，刘伶并不因此有何懈怠和恐惧，毕竟对于一个内心拥有持久且强烈的冲动的人来说，行动受限于各种鸡毛蒜皮之事，似乎比承受因顺从内心抉择
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-31 21:32" pubdate>
+              2024-10-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B0%8F%E8%AF%B4/" class="category-chain-item">小说</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%AD%BB%E4%BE%BF%E5%9F%8B%E6%88%91/">#死便埋我</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E2%80%9C%E9%87%8D%E5%BB%BA%E9%99%84%E8%BF%91%E2%80%9D%EF%BC%9A%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BB%8E%E7%8E%B0%E5%AE%9E%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%8A%9B%E9%87%8F%EF%BC%9F/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/C9AheVUuz7j8kDa.webp" srcset="/img/loading.gif" lazyload alt="“重建附近”：年轻人如何从现实中获得力量？">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E2%80%9C%E9%87%8D%E5%BB%BA%E9%99%84%E8%BF%91%E2%80%9D%EF%BC%9A%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BB%8E%E7%8E%B0%E5%AE%9E%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%8A%9B%E9%87%8F%EF%BC%9F/" target="_blank">
+          “重建附近”：年轻人如何从现实中获得力量？
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E2%80%9C%E9%87%8D%E5%BB%BA%E9%99%84%E8%BF%91%E2%80%9D%EF%BC%9A%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E4%BB%8E%E7%8E%B0%E5%AE%9E%E4%B8%AD%E8%8E%B7%E5%BE%97%E5%8A%9B%E9%87%8F%EF%BC%9F/" target="_blank">
+        <div>
+          摘要[1] 人类学家项飙提出“附近”的概念，尤其将“重建附近”作为对当下年轻人的一种劝说。《当代青年研究》近日对项飙进行专访，访谈分为上、下两篇发布，上篇访谈讨论了“附近”作为一个概念的缘起、背景、价值和所能扮演的角色。项飙认为，“附近”的概念受到存在主义和实用主义哲学的影响，旨在发展一种“生活的人类学”，希望能使个体在无法改变整体性环境的条件下学会如何处理自己的生活，而“附近”正是解决这一难题的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-31 01:20" pubdate>
+              2024-10-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%91%98%E5%BD%95/" class="category-chain-item">摘录</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A4%BE%E4%BC%9A%E8%A7%82%E5%AF%9F/">#社会观察</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E5%BA%8F/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/7HRxqNmPkLdzErA.jpg" srcset="/img/loading.gif" lazyload alt="序">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E5%BA%8F/" target="_blank">
+          序
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E5%BA%8F/" target="_blank">
+        <div>
+          刘伶，字伯伦，沛国人也。 放情肆志，常以细宇宙齐万物为心。 澹默少言，不妄交游，与阮籍、嵇康相遇，欣然神解，携手入林。 初不以家产有无介意。 常乘鹿车，携一壶酒，使人荷锸而随之，谓曰：“死便埋我”。 ——选自《晋书·刘伶传》  那年刘伶还在读书，从家里去往学校需要翻过一座山。冬末一次短暂的清晨暖阳，刘伶正沿一条泥泞小路往学校去，路旁的小树上接连悬挂几天的雪帽逐渐化成泪水，他预感到这片已经陪伴他十
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-10-04 20:32" pubdate>
+              2024-10-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%B0%8F%E8%AF%B4/" class="category-chain-item">小说</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%AD%BB%E4%BE%BF%E5%9F%8B%E6%88%91/">#死便埋我</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E8%8D%92%E5%8E%9F%E7%8B%BC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%BF%83%E5%BE%97/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/nC62Kpr5B1IxcVm.webp" srcset="/img/loading.gif" lazyload alt="荒原狼的游戏心得">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%8D%92%E5%8E%9F%E7%8B%BC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%BF%83%E5%BE%97/" target="_blank">
+          荒原狼的游戏心得
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E8%8D%92%E5%8E%9F%E7%8B%BC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%BF%83%E5%BE%97/" target="_blank">
+        <div>
+          过了许久的时间，我终于鼓起勇气继续翻开这本书，并花了几天的时间将它读完。曾经说好有一场围炉夜话，如今围在炉旁是不能了，但仍然可以有我自顾自的夜话，算作是我代曾向你说过那些话的那个人为他所说过的那些话负责。 由于落笔的时间很晚，我无法向你讲述所有我阅读此书的体验，加之许多思想只在阅读的那些时刻短暂地在我脑中飘过，而那些时刻已经过去，大概不可能重新出现在我脑海中。所有我写下的文字，也许对你而言并无意义
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-09-20 02:21" pubdate>
+              2024-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/%E8%90%BD%E9%80%89%E6%84%9F%E8%A8%80%E4%B8%8E%E9%99%8B%E4%BD%9C/" target="_blank">
+          <img src="https://s2.loli.net/2024/12/21/Yya2X1Lo6Czq3AG.webp" srcset="/img/loading.gif" lazyload alt="落选感言与陋作">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%90%BD%E9%80%89%E6%84%9F%E8%A8%80%E4%B8%8E%E9%99%8B%E4%BD%9C/" target="_blank">
+          落选感言与陋作
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt " href="/%E8%90%BD%E9%80%89%E6%84%9F%E8%A8%80%E4%B8%8E%E9%99%8B%E4%BD%9C/" target="_blank">
+        <div>
+          2023年12月31日晚，「多抓鱼文学奖」投稿时间步入倒计时。在经历了两个星期的遴选，最终确定，我的伟大创作终于落选。踌躇之余，我写下了这篇落选感言，没有人能剥夺我发表感言的权利！ 这是一段「不论你看不看，我始终要写」的落选感言，其中我共有三句话要说： 第〇句话是，此次「多抓鱼文学奖」的征稿主题是「从庆祝失败开始」。 第一句话是，原本想写的是获奖感言。然而我被骗了。多抓鱼的鱼编在向我们宣布这场文学
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-01-17 20:39" pubdate>
+              2024-01-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+    <div>
+        <span id="timeDate">正在载入天数...</span>
+        <span id="times">载入时分秒...</span>
+        <script>
+          var now = new Date();
+          function createtime(){
+            var grt= new Date("10/4/2024 17:32:25");
+            now.setTime(now.getTime()+250);
+            days = (now - grt ) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if(String(hnum).length ==1 ){
+              hnum = "0" + hnum;
+            }
+            minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if(String(mnum).length ==1 ){
+              mnum = "0" + mnum;
+            }
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if(String(snum).length ==1 ){
+              snum = "0" + snum;
+            }
+            document.getElementById("timeDate").innerHTML = "本站已运行&nbsp"+dnum+"&nbsp天";
+            document.getElementById("times").innerHTML = hnum + "&nbsp时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+          }
+          setInterval("createtime()",250);
+        </script>
+    </div>
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/js/backgroundize.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --><script src="/js/backgroundize.js"></script><!-- hexo injector body_end end --></body>
+</html>

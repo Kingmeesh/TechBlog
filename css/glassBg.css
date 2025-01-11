@@ -1,0 +1,14 @@
+/* 正文底页毛玻璃效果 */
+#board {
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+/* 侧边目录毛玻璃效果 */
+#toc {
+  padding: 10px;
+  top: 4rem;
+  background-color: var(--board-bg-color);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
