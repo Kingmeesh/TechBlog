@@ -2,8 +2,8 @@
 if (!window.categoryBackgrounds) {
   window.categoryBackgrounds = {
     default: {
-      normal: 'https://s2.loli.net/2024/12/20/OGTtQbqwBE92UFm.webp',
-      dark: 'https://s2.loli.net/2024/12/20/OGTtQbqwBE92UFm.webp'
+      normal: 'https://s2.loli.net/2025/03/09/MF5Ugvm8LSsGrkC.webp',
+      dark: 'https://s2.loli.net/2025/03/09/MF5Ugvm8LSsGrkC.webp'
     },
     算法: {
       normal: 'https://s2.loli.net/2024/12/20/L3m7XhRW1btgMwe.jpg',
@@ -20,7 +20,7 @@ if (!window.categoryBackgrounds) {
     摘录: {
       normal: 'https://s2.loli.net/2024/12/20/N7LWRl8ABKQgU9c.webp',
       dark: 'https://s2.loli.net/2024/12/23/7uhYcDjSxGVAv4q.webp'
-    }
+    },
   };
 }
 
