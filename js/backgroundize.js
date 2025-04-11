@@ -68,12 +68,18 @@ function getPostCategory() {
  * 获取背景配置
  */
 function getBackgroundConfig(pageType) {
+  // 如果是主页，返回默认背景
+  if (pageType === 'home') {
+    return window.categoryBackgrounds.default;
+  }
+
   const category = getPostCategory();
   if (category && window.categoryBackgrounds[category]) {
     return window.categoryBackgrounds[category];
   }
   return window.categoryBackgrounds.default;
 }
+
 
 /**
  * 获取主题模式
