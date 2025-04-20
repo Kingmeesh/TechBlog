@@ -15,5 +15,4 @@ page.banner_mask_alpha = page.banner_mask_alpha || theme.page.banner_mask_alpha
 
 <% if (/<[^>]+? class="[^"]*?markdown-body[^"]*?"/gims.test(page.content)) { %>
   <%- partial('_partials/markdown-plugins') %>
-  <%- JSON.stringify(page) %>
 <% } %>

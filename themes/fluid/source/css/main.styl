@@ -17,3 +17,9 @@ for $inject_mixin in hexo-config("injects.mixin")
 
 for $inject_style in hexo-config("injects.style")
   @import $inject_style;
+.katex {
+  display: inline-block;
+  white-space: nowrap; /* 确保公式不换行 */
+  max-width: 100%; /* 保证在窄屏时适应 */
+  font-size: 1em; /* 默认字体大小，可调整 */
+}

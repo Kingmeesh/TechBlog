@@ -55,17 +55,32 @@ $scroll-arrow-height-limit = theme-config-origin("scroll_down_arrow.banner_heigh
 $board-bg-color = theme-config("color.board_color", "#fff")
 $board-bg-color-dark = theme-config("color.board_color_dark", "#252d38")
 
-// scrollbar
-$scrollbar-color = theme-config("color.scrollbar_color", "#c4c6c9")
-$scrollbar-color-dark = theme-config("color.scrollbar_color_dark", "#687582")
-$scrollbar-hover-color = theme-config("color.scrollbar_hover_color", "#a6a6a6")
-$scrollbar-hover-color-dark = theme-config("color.scrollbar_hover_color_dark", "#9da8b3")
+
 
 // code
-$highlight-bg-color = hexo-config("code.highlight.highlightjs.light.backgroundColor") && hexo-config("code.highlight.highlightjs.light.backgroundColor") != "#fff" ? unquote(hexo-config("code.highlight.highlightjs.light.backgroundColor")):#f6f8fa
-$highlight-bg-color-dark = hexo-config("code.highlight.highlightjs.dark.backgroundColor") && hexo-config("code.highlight.highlightjs.dark.backgroundColor") != "#fff" ? unquote(hexo-config("code.highlight.highlightjs.dark.backgroundColor")):#2d333b
-$inlinecode-bg-color = rgba(175, 184, 193, .2)
-$inlinecode-bg-color-dark = rgba(99, 110, 123, .4)
+$highlight-bg-color = hexo-config("code.highlight.highlightjs.light.backgroundColor") && hexo-config("code.highlight.highlightjs.light.backgroundColor") != "#fff" ? unquote(hexo-config("code.highlight.highlightjs.light.backgroundColor")) : #f6f8fa
+$highlight-bg-color-dark = hexo-config("code.highlight.highlightjs.dark.backgroundColor") && hexo-config("code.highlight.highlightjs.dark.backgroundColor") != "#fff" ? unquote(hexo-config("code.highlight.highlightjs.dark.backgroundColor")) : #2d333b
+// 修改代码块背景色
+$highlight-bg-color = #fbedec // 修改浅色背景
+$highlight-bg-color-dark = #1d2631 // 修改深色背景
 
 // shadow
 $img-shadow = 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15)
+
+
+.highlight
+  background: #0c1923
+  border-radius: 15px
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);  // 缩小阴影范围，避免左上角突出
+  padding-top: 30px
+
+  &::before
+    background: #fc625d
+    border-radius: 50%
+    box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b
+    content: ' '
+    height: 12px
+    left: 12px
+    margin-top: -20px
+    position: absolute
+    width: 12px

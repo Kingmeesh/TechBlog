@@ -1,3 +1,8 @@
+<!-- 加载 jQuery 和 FancyBox -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
 <%
 var separator = theme.title_join_string || theme.tab_title_separator
 var title = page.title ? [page.title, config.title].join(separator) : config.title
@@ -24,7 +29,6 @@ var ogConfig = Object.assign({ image: ogImage && url_for(ogImage) }, theme.open_
   <% } %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -54,5 +58,4 @@ var ogConfig = Object.assign({ image: ogImage && url_for(ogImage) }, theme.open_
   <%- js_ex(theme.static_prefix.internal_js, 'color-schema.js') %>
   <%- partial('_partials/plugins/analytics.ejs') %>
 
-  <%- inject_point('head') %>
 </head>

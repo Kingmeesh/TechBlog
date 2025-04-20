@@ -1,4 +1,24 @@
+/* 设置代码部分的字体为 JetBrains Mono */
+code, pre {
+  font-family: 'JetBrains Mono', 'Nimbus Roman No9 L', 'PingFang SC', monospace !important;
+}
+
+/* 设置网页和正文的字体 */
 html, body, .markdown-body {
-    font-family: -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', serif;
-    font-size: 18px;
-  }
+  font-family: 'JetBrains Mono', -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', '幼圆', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', serif;
+}
+
+/* 代码中的中文部分使用 幼圆 字体 */
+code, pre {
+  font-family: 'JetBrains Mono', '幼圆', monospace !important;
+}
+
+
+/* 引入本地字体 幼圆 */
+@font-face {
+  font-family: '幼圆';
+  src: url('/css/fonts/HYZhengYuan-55W.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
